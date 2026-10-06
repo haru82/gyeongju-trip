@@ -1,2 +1,538 @@
-# gyeongju-trip
-gyeongju-trip
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>경주 2박 3일 가족여행</title>
+
+<style>
+:root{
+  --bg:#f5f1e8;--card:#fffdf8;--ink:#24231f;
+  --muted:#777267;--accent:#8b5e3c;--green:#566b4f;--line:#e7dfd2
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  background:var(--bg);color:var(--ink)
+}
+.wrap{max-width:920px;margin:auto;padding:22px 16px 60px}
+.hero{
+  background:linear-gradient(135deg,#332a24,#72513b);
+  color:white;border-radius:24px;padding:26px;
+  box-shadow:0 10px 30px #0002
+}
+.hero h1{margin:0 0 8px;font-size:29px}
+.hero p{margin:5px 0;color:#f1e9df}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.chip{
+  background:#ffffff1d;border:1px solid #ffffff30;
+  padding:7px 10px;border-radius:999px;font-size:13px
+}
+nav{
+  position:sticky;top:0;z-index:5;display:flex;gap:8px;
+  overflow:auto;padding:12px 0;
+  background:linear-gradient(var(--bg) 75%,transparent)
+}
+nav a{
+  text-decoration:none;color:var(--ink);background:white;
+  border:1px solid var(--line);border-radius:999px;
+  padding:9px 14px;white-space:nowrap;font-weight:700
+}
+.day{margin-top:24px}
+.dayhead{
+  display:flex;justify-content:space-between;
+  align-items:end;margin-bottom:10px
+}
+.dayhead h2{margin:0;font-size:22px}
+.dayhead span{color:var(--muted);font-size:13px}
+.timeline{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:20px;overflow:hidden
+}
+.item{
+  display:grid;grid-template-columns:82px 1fr auto;
+  gap:12px;padding:15px 16px;
+  border-bottom:1px solid var(--line);align-items:center
+}
+.item:last-child{border:0}
+.time{font-weight:800;color:var(--accent)}
+.title{font-weight:750}
+.sub{font-size:13px;color:var(--muted);margin-top:4px}
+.tag{
+  font-size:12px;border-radius:999px;padding:5px 8px;
+  background:#eee8de;white-space:nowrap
+}
+.rest{background:#eef2ea}
+.food{background:#fff7e8}
+.addr{font-size:12px;color:var(--muted);margin-top:5px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.btn{
+  text-decoration:none;color:var(--green);
+  font-size:13px;font-weight:800
+}
+.copy{
+  border:0;background:#f1eadf;color:var(--green);
+  border-radius:9px;padding:6px 9px;
+  font-size:12px;font-weight:800
+}
+.note{
+  margin-top:18px;padding:17px 18px;
+  border-radius:18px;background:#e9eee6;line-height:1.6
+}
+.foodgrid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:10px
+}
+.foodcard{
+  background:white;border:1px solid var(--line);
+  border-radius:16px;padding:14px
+}
+.foodcard b{display:block;margin-bottom:4px}
+.foodcard small{color:var(--muted)}
+@media(max-width:600px){
+  .hero h1{font-size:25px}
+  .item{grid-template-columns:68px 1fr}
+  .item .tag{grid-column:2;justify-self:start}
+  .foodgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<main class="wrap">
+
+<section class="hero">
+<h1>🍂 경주 2박 3일 가족여행</h1>
+<p>10월 16일(금) → 10월 18일(일) · 구리 출발 · 8인 가족</p>
+<p>70대 부모님과 천천히 즐기는 역사 · 맛집 · 휴식 여행</p>
+
+<div class="chips">
+<span class="chip">🏨 켄싱턴리조트 경주</span>
+<span class="chip">🚙 무리 없는 동선</span>
+<span class="chip">🍚 가족 식사 중심</span>
+<span class="chip">☕ 휴식 충분히</span>
+</div>
+</section>
+
+<nav>
+<a href="#d1">DAY 1</a>
+<a href="#d2">DAY 2</a>
+<a href="#d3">DAY 3</a>
+<a href="#food">먹거리</a>
+</nav>
+
+<section class="day" id="d1">
+<div class="dayhead">
+<h2>DAY 1 · 10/16(금) · 경주 시내</h2>
+<span>핵심 유적 + 시장 포장 + 이른 야경</span>
+</div>
+
+<div class="timeline">
+
+<div class="item">
+<div class="time">06:00</div>
+<div>
+<div class="title">구리 출발 🚗</div>
+<div class="sub">중간 휴게소에서 아침·휴식</div>
+</div>
+<span class="tag">이동</span>
+</div>
+
+<div class="item food">
+<div class="time">11:00</div>
+<div>
+<div class="title">수경사</div>
+<div class="sub">한옥 분위기의 경주 한식 · 첫날 특별한 점심</div>
+<div class="addr">경북 경주시 사정로57번길 25</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/수경사%20경주">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 사정로57번길 25')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">점심</span>
+</div>
+
+<div class="item">
+<div class="time">12:20</div>
+<div>
+<div class="title">대릉원</div>
+<div class="sub">약 50분 · 평탄한 핵심 구간 위주</div>
+<div class="addr">경북 경주시 황남동 31-1</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20대릉원">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 황남동 31-1')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">관광</span>
+</div>
+
+<div class="item">
+<div class="time">13:10</div>
+<div>
+<div class="title">황리단길</div>
+<div class="sub">약 40분 · 가볍게 산책</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20황리단길">🗺 지도</a>
+</div>
+</div>
+<span class="tag">산책</span>
+</div>
+
+<div class="item rest">
+<div class="time">14:00</div>
+<div>
+<div class="title">테라로사 경주 ☕</div>
+<div class="sub">약 50분 · 부모님 휴식</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/테라로사%20경주점">🗺 지도</a>
+</div>
+</div>
+<span class="tag">카페</span>
+</div>
+
+<div class="item">
+<div class="time">15:10</div>
+<div>
+<div class="title">첨성대</div>
+<div class="sub">30분 정도만 가볍게</div>
+<div class="addr">경북 경주시 인왕동 839-1</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20첨성대">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 인왕동 839-1')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">관광</span>
+</div>
+
+<div class="item food">
+<div class="time">16:00</div>
+<div>
+<div class="title">성동시장</div>
+<div class="sub">30분만 · 천북닭강정·우엉김밥 등 야식용 포장</div>
+<div class="addr">경북 경주시 원화로281번길 11</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20성동시장">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 원화로281번길 11')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">포장</span>
+</div>
+
+<div class="item food">
+<div class="time">17:00</div>
+<div>
+<div class="title">백년손님</div>
+<div class="sub">이른 저녁 · 석쇠불고기 중심</div>
+<div class="addr">경북 경주시 포석로1050번길 32</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/백년손님%20경주">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 포석로1050번길 32')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">저녁</span>
+</div>
+
+<div class="item">
+<div class="time">18:15</div>
+<div>
+<div class="title">동궁과 월지 🌙</div>
+<div class="sub">18:15~19:15 · 너무 늦지 않게 야경</div>
+<div class="addr">경북 경주시 원화로 102</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20동궁과%20월지">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 원화로 102')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">야경</span>
+</div>
+
+<div class="item rest">
+<div class="time">19:40</div>
+<div>
+<div class="title">켄싱턴리조트 경주 체크인</div>
+<div class="sub">이후 휴식 · 시장 포장음식은 야식</div>
+<div class="addr">경북 경주시 보문로 182-29</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/켄싱턴리조트%20경주">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 보문로 182-29')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">숙박</span>
+</div>
+
+</div>
+</section>
+
+<section class="day" id="d2">
+
+<div class="dayhead">
+<h2>DAY 2 · 10/17(토) · 불국사 & 보문</h2>
+<span>불국사·석굴암 + 엘로우 + 긴 휴식</span>
+</div>
+
+<div class="timeline">
+
+<div class="item">
+<div class="time">08:00</div>
+<div><div class="title">아침식사</div></div>
+<span class="tag">조식</span>
+</div>
+
+<div class="item">
+<div class="time">09:00</div>
+<div><div class="title">켄싱턴 출발</div></div>
+<span class="tag">이동</span>
+</div>
+
+<div class="item">
+<div class="time">09:30</div>
+<div>
+<div class="title">불국사</div>
+<div class="sub">09:30~10:50 · 핵심 전각 중심</div>
+<div class="addr">경북 경주시 불국로 385</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20불국사">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 불국로 385')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">관광</span>
+</div>
+
+<div class="item">
+<div class="time">11:10</div>
+<div>
+<div class="title">석굴암</div>
+<div class="sub">11:10~12:00 · 부모님 컨디션 따라 생략 가능</div>
+<div class="addr">경북 경주시 석굴로 238</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20석굴암">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 석굴로 238')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">선택</span>
+</div>
+
+<div class="item food">
+<div class="time">12:40</div>
+<div>
+<div class="title">맛자랑</div>
+<div class="sub">돌솥정식 등 · 단체석/주차 편리</div>
+<div class="addr">경북 경주시 보불로 329</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/맛자랑%20경주">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 보불로 329')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">점심</span>
+</div>
+
+<div class="item rest">
+<div class="time">14:00</div>
+<div>
+<div class="title">엘로우 ☕🥐</div>
+<div class="sub">14:00~15:10 · 보문호 뷰 + 빵·커피</div>
+<div class="addr">경북 경주시 경감로 375-16</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/엘로우%20경주">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 경감로 375-16')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">카페</span>
+</div>
+
+<div class="item rest">
+<div class="time">15:25</div>
+<div>
+<div class="title">켄싱턴리조트 휴식 🛏️</div>
+<div class="sub">약 1시간 40분 · 부모님 휴식 최우선</div>
+</div>
+<span class="tag">휴식</span>
+</div>
+
+<div class="item">
+<div class="time">17:10</div>
+<div>
+<div class="title">보문호 짧은 산책</div>
+<div class="sub">컨디션 좋을 때만 20분 내외</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20보문호">🗺 지도</a>
+</div>
+</div>
+<span class="tag">선택</span>
+</div>
+
+<div class="item food">
+<div class="time">18:00</div>
+<div>
+<div class="title">영양숯불갈비 🥩</div>
+<div class="sub">여행 메인 한우 저녁</div>
+<div class="addr">경북 경주시 봉황로 79</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/영양숯불갈비%20경주">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 봉황로 79')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">저녁</span>
+</div>
+
+<div class="item rest">
+<div class="time">19:40</div>
+<div>
+<div class="title">켄싱턴 복귀</div>
+<div class="sub">저녁 이후 일정 없음</div>
+</div>
+<span class="tag">휴식</span>
+</div>
+
+</div>
+</section>
+
+<section class="day" id="d3">
+
+<div class="dayhead">
+<h2>DAY 3 · 10/18(일) · 여유로운 마무리</h2>
+<span>느긋한 아침 + 함양집 + 점심 직후 귀가</span>
+</div>
+
+<div class="timeline">
+
+<div class="item food">
+<div class="time">08:00</div>
+<div>
+<div class="title">켄싱턴 아침식사</div>
+<div class="sub">외부 이동 없이 편하게 시작</div>
+</div>
+<span class="tag">아침</span>
+</div>
+
+<div class="item">
+<div class="time">09:30</div>
+<div><div class="title">체크아웃</div></div>
+<span class="tag">출발</span>
+</div>
+
+<div class="item rest">
+<div class="time">10:00</div>
+<div>
+<div class="title">보문권 가벼운 시간</div>
+<div class="sub">보문호 짧은 산책 또는 바로 함양집 이동 · 선택 일정</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/경주%20보문호">🗺 지도</a>
+</div>
+</div>
+<span class="tag">선택</span>
+</div>
+
+<div class="item food">
+<div class="time">11:00</div>
+<div>
+<div class="title">함양집</div>
+<div class="sub">한우물회 등 · 오픈 직후 입장 목표</div>
+<div class="addr">경북 경주시 북군1길 10-1</div>
+<div class="actions">
+<a class="btn" href="https://map.naver.com/p/search/함양집%20경주">🗺 지도</a>
+<button class="copy" onclick="copyAddr('경북 경주시 북군1길 10-1')">📋 주소 복사</button>
+</div>
+</div>
+<span class="tag">점심</span>
+</div>
+
+<div class="item">
+<div class="time">12:10</div>
+<div>
+<div class="title">구리로 출발 🚗</div>
+<div class="sub">일요일 귀경 정체 전에 출발</div>
+</div>
+<span class="tag">귀가</span>
+</div>
+
+</div>
+</section>
+
+<section id="food" class="day">
+
+<div class="dayhead">
+<h2>🍽️ 먹거리 한눈에</h2>
+<span>확정 동선</span>
+</div>
+
+<div class="foodgrid">
+
+<div class="foodcard">
+<b>DAY 1 점심 · 수경사</b>
+<small>한옥 한식</small>
+</div>
+
+<div class="foodcard">
+<b>DAY 1 저녁 · 백년손님</b>
+<small>석쇠불고기</small>
+</div>
+
+<div class="foodcard">
+<b>DAY 1 야식 · 성동시장</b>
+<small>닭강정 · 우엉김밥 일부 포장</small>
+</div>
+
+<div class="foodcard">
+<b>DAY 2 점심 · 맛자랑</b>
+<small>돌솥정식</small>
+</div>
+
+<div class="foodcard">
+<b>DAY 2 카페 · 엘로우</b>
+<small>빵 · 커피 · 보문호</small>
+</div>
+
+<div class="foodcard">
+<b>DAY 2 저녁 · 영양숯불갈비</b>
+<small>한우</small>
+</div>
+
+<div class="foodcard">
+<b>DAY 3 점심 · 함양집</b>
+<small>한우물회</small>
+</div>
+
+</div>
+
+<div class="note">
+<b>👵 부모님 여행 원칙</b><br>
+석굴암·보문호 산책은 컨디션에 따라 생략합니다.
+성동시장은 관광하지 않고 필요한 음식만 포장하며,
+DAY 2 오후 숙소 휴식은 가급적 지킵니다.
+</div>
+
+</section>
+
+</main>
+
+<div id="toast"
+style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);
+background:#29251f;color:white;padding:10px 15px;border-radius:999px;
+font-size:13px;display:none;z-index:99"></div>
+
+<script>
+function copyAddr(t){
+  const done=()=>{
+    const x=document.getElementById('toast');
+    x.textContent='📋 주소 복사 완료';
+    x.style.display='block';
+    setTimeout(()=>x.style.display='none',1400);
+  };
+
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(t).then(done);
+  }else{
+    const a=document.createElement('textarea');
+    a.value=t;
+    document.body.appendChild(a);
+    a.select();
+    document.execCommand('copy');
+    a.remove();
+    done();
+  }
+}
+</script>
+
+</body>
+</html>
