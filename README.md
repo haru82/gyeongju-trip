@@ -1,0 +1,2 @@
+# gyeongju-trip
+gyeongju-trip
